@@ -13,8 +13,4 @@ class Sub_sub_category extends Model
         return $this->belongsTo(Sub_category::class);
     }
 
-    public function shops()
-    {
-        return $this->hasMany(Shop::class,'sub_sub_category_shop');
-    }
 }
