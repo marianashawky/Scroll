@@ -21,6 +21,7 @@ class CreateShopsTable extends Migration
             $table->string('location');
             $table->string('menu');
             $table->string('wokrking_time');
+            $table->Integer('sub_sub_category_id')->constrained('sub_sub_categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ class CreateSubSubCategoriesTable extends Migration
             $table->string('title_en');
             $table->string('title_ar');
             $table->string('image');
-            $table->Integer('sub_category_id');
+            $table->Integer('sub_category_id')->constrained('sub_categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

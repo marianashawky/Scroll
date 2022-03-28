@@ -8,4 +8,9 @@ class Shop extends Model
 {
     protected $guarded = [];
 
+    public function subSubCategory()
+    {
+        return $this->belongsTo(Sub_sub_category::class);
+    }
+
 }
