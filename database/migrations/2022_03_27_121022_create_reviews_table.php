@@ -16,6 +16,7 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('content');
+            $table->Integer('shop_id')->constrained('shops')->onDelete('cascade');
             $table->timestamps();
         });
     }
